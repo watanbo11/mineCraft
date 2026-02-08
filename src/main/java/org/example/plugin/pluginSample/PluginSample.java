@@ -75,7 +75,7 @@ public final class PluginSample extends JavaPlugin implements Listener {
       count++;
 
     Path path=Path.of("firework.txt");
-    Files.writeString(path,"花火が打ち上がりました");
+    Files.writeString(path,"花火が打ち上がりました",StandardOpenOption.APPEND);
     player.sendMessage(Files.readString(path));
 
   }
